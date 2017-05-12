@@ -55,17 +55,17 @@
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
     "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
     "post-install-cmd": [
-      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+      "@drupal-scaffold",
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
       "DrupalProject\\composer\\ScriptHandler::deployLibraries"
     ],
     "post-update-cmd": [
-      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+      "@drupal-scaffold",
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
       "DrupalProject\\composer\\ScriptHandler::deployLibraries"
     ],
     "post-create-project-cmd": [
-      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+      "@drupal-scaffold",
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
       "DrupalProject\\composer\\ScriptHandler::deployLibraries"
     ]
@@ -93,6 +93,21 @@
       "export-configuration": "drush config-export --yes"
     }
   },
+  "drupal-scaffold": {
+     "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8/{version}/{path}",
+     "includes": [
+       "sites/default/default.services.pantheon.preproduction.yml",
+       "sites/default/settings.pantheon.php"
+     ],
+     "excludes": [
+       ".csslintrc",
+       ".editorconfig",
+       ".eslintignore",
+       ".eslintrc.json",
+       ".htaccess",
+       "web.config"
+     ]
+   },
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
