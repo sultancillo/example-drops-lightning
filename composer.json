@@ -60,7 +60,6 @@
       "DrupalProject\\composer\\ScriptHandler::deployLibraries"
     ],
     "post-update-cmd": [
-      "@drupal-scaffold",
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
       "DrupalProject\\composer\\ScriptHandler::deployLibraries"
     ],
