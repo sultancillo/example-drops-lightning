@@ -19,7 +19,8 @@
     "acquia/lightning": "^2.1",
     "drupal/simple_block": "^1.0@beta",
     "drush/drush": "~8",
-    "rvtraveller/qs-composer-installer": "^1.1"
+    "rvtraveller/qs-composer-installer": "^1.1",
+    "webflo/drupal-core-strict": "^8"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
