@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f06ae242022c22fbbddd2f8d6d0c45d",
+    "content-hash": "7b40a695e80af69b7ed2464fa57f1449",
     "packages": [
         {
             "name": "acquia/lightning",
