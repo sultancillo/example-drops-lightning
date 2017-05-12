@@ -17,7 +17,6 @@
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1.0.0-rc8",
     "acquia/lightning": "^2.1",
-    "drupal/simple_block": "^1.0@beta",
     "drush/drush": "~8",
     "rvtraveller/qs-composer-installer": "^1.1",
     "webflo/drupal-core-strict": "^8"
@@ -86,8 +85,7 @@
     "build-env": {
       "install-cms": [
         "drush site-install lightning --account-mail={account-mail} --account-name={account-name} --account-pass={account-pass} --site-mail={site-mail} --site-name={site-name} --db-su=ubuntu --yes",
-        "drush pm-enable config_direct_save simple_block --yes",
-        "drush pm-uninstall block_content --yes"
+        "drush pm-enable config_direct_save --yes"
       ],
       "export-configuration": "drush config-export --yes"
     },
